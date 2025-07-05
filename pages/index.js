@@ -20,7 +20,7 @@ export default function Home() {
       <Head>
         <title>Deeni Gift</title>
         <meta name="description" content="Send beautiful Islamic gifts with duas." />
-      </head>
+      </Head> {/* ✅ Yeh tag capital hona chahiye */}
 
       {/* Stars Background */}
       {[...Array(10)].map((_, i) => (
@@ -58,4 +58,4 @@ export default function Home() {
       </div>
     </div>
   );
-}
+              }
