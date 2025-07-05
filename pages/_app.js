@@ -1,18 +1,19 @@
-// pages/_app.js (UPDATED CODE)
-
+// pages/_app.js
 import '../styles/globals.css';
-import LoadingScreen from '../components/LoadingScreen'; // Import the new component
-import Head from 'next/head'; // Import Head for favicon
+import LoadingScreen from '../components/LoadingScreen';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      {/* Ensure favicon is present in /public */}
       <Head>
         <title>Deeni Gift</title>
         <meta name="description" content="Send beautiful Islamic gifts with duas." />
-        <link rel="icon" href="/favicon.ico" /> {/* Ensure you have a favicon.ico in your public folder */}
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <LoadingScreen> {/* Wrap your app with LoadingScreen */}
+
+      <LoadingScreen>
         <Component {...pageProps} />
       </LoadingScreen>
     </>
